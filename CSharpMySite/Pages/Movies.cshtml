@@ -8,50 +8,23 @@
     <h1 class="heading"> <span>our</span> movies </h1>
 
     <div class="productgallery">
-        <div class="productgallery_card">
-            <div class="productgallery_card_container">
-                <img src="https://picsum.photos/300/300?1" alt="cookies" class="hero-image" />
-                <div class="information">
+        @foreach (var item in Model.Items)
+        {
+            <div class="productgallery_card">
+                <div class="productgallery_card_container">
+                    <img src="https://picsum.photos/300/300?1" alt="cookies" class="hero-image"/>
+                    <div class="information">
 
-                    <div class="name">Lorem, ipsum.</div>
+                        <div class="name">@item.Title</div>
 
-                    <div class="store">Lorem, ipsum dolor.</div>
+                        <div class="store">@item.Director</div>
 
-                    <a href="#" class="storebutton">Purchase Product</a>
+                        <a href="#" class="storebutton">@item.GenreName</a>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="productgallery_card">
-            <div class="productgallery_card_container">
-                <img src="https://picsum.photos/300/300?2" alt="cookies" class="hero-image" />
-                <div class="information">
-
-                    <div class="name">Lorem, ipsum.</div>
-
-                    <div class="store">Lorem, ipsum dolor.</div>
-
-                    <a href="#" class="storebutton">Purchase Product</a>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="productgallery_card">
-            <div class="productgallery_card_container">
-                <img src="https://picsum.photos/300/300?3" alt="cookies" class="hero-image" />
-                <div class="information">
-
-                    <div class="name">Lorem, ipsum.</div>
-
-                    <div class="store">Lorem, ipsum dolor.</div>
-
-                    <a href="#" class="storebutton">Purchase Product</a>
-
-                </div>
-            </div>
-        </div>
-
+        }
 
     </div>
 
