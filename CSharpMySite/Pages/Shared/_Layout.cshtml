@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Din sajt</title>
+    <link href='https://unpkg.com/boxicons@@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css" asp-append-version="true" >
+</head>
+
+
+<body>
+<header class="siteheader">
+    <div class="logo">
+        <i class='bx bxs-cat logoicon'></i>
+        Cat<span class="logopart2">Lovers</span>                
+    </div>
+    <nav>
+        <ul class="navmenu">
+            <li><a class="headeranchor" href="#">Home</a></li>
+            <li><a class="headeranchor" asp-page="/Movies">Movies</a></li>
+            <li><a class="headeranchor" href="#">Products</a></li>
+            <li><a class="headeranchor" href="#">About</a></li>
+            <li><a class="headeranchor" href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <ul class="navicons">
+        <li id="menu-search"><a class="navanchor" href="#"><i class='bx bx-search-alt navicon'></i></a></li> 
+        <li id="menu-hamburger"><a class="navanchor" href="#"><i class='bx bx-menu navicon' ></i></a></li> 
+        <li id="menu-close"><a class="navanchor" href="#"><i class='bx bx-x navicon'></i></a></li> 
+    </ul>
+</header>
+
+    <main >
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer text-muted">
+            &copy; 2023 - CSharpMySite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
