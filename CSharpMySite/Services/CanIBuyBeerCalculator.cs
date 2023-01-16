@@ -12,10 +12,12 @@ public class CanIBuyBeerCalculator
 {
     public bool CanIBuyBeer(Location location, int age, float promille)
     {
-        if(location == Location.Krogen && age > 17 && promille < 1.0)
-            return true;
-        if (location == Location.Systemet && age > 17 && promille < 1.0)
-            return true;
-        return false;
+        if(promille > 1.0) return false;
+
+        if(location == Location.Krogen && age < 18)
+            return false;
+        if (location == Location.Systemet && age < 20)
+            return false;
+        return true;
     }
 }
