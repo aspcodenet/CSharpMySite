@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="DTO\" />
   </ItemGroup>
 
 </Project>
