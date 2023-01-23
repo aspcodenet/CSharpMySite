@@ -17,7 +17,7 @@ public class MovieController : ControllerBase
         _context = context;
     }
 
-    [HttpGet]  // R
+    [HttpGet]  // api/movie
     public IEnumerable<MovieDTO> Get()
     {
         return _context.Movies.Select(e => new MovieDTO
@@ -30,7 +30,7 @@ public class MovieController : ControllerBase
         });
     }
 
-    [HttpGet]  // R 24
+    [HttpGet]  // api/movie/12
     [Route("{id}")]
     public IActionResult GetSingle(int id)
     {
